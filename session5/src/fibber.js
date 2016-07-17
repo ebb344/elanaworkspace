@@ -15,16 +15,26 @@ fibber.initialize = function()
 
 
 	$(".truth-btn").click(function(){
-		alert(truthText);
+		fibber.processDecision("truth");	
 	});
-
 
 	$(".fib-btn").click(function(){
-		alert(fibText);
+		fibber.processDecision("fib");
 	});
+
 
 };
 
+fibber.processDecision = function(decision){
+
+	if(decision == "truth"){
+		alert(truthText);
+	}
+	if(decision == "fib"){
+		alert(fibText);
+	}
+
+};
 
 
 
